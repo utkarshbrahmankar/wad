@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Directory</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #f4f4f4; }
+    h2 { color: #333; }
+    .directory { display: flex; flex-wrap: wrap; gap: 20px; }
+    .card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      width: 250px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .salary {
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Employee Directory</h2>
+  <div class="directory" id="employeeDirectory"></div>
+
+  <script>
+    fetch('/api/employees')
+      .then(res => res.json())
+      .then(employees => {
+        const container = document.getElementById('employeeDirectory');
+        employees.forEach(emp => {
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.innerHTML = `
+            <img src="${emp.image}" alt="${emp.name}">
+            <h3>${emp.name}</h3>
+            <p><strong>${emp.designation}</strong></p>
+            <p>Department: ${emp.department}</p>
+            <p class="salary">₹${emp.salary}</p>
+          `;
+          container.appendChild(card);
+        });
+      })
+      .catch(err => {
+        console.error('Failed to load employee data:', err);
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PICT Student Clubs</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1e40af;
+      color: white;
+      padding: 16px;
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 16px;
+    }
+
+    section.club-card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+
+    section h2 {
+      color: #1e40af;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    section p {
+      margin-top: 8px;
+      font-size: 0.95rem;
+    }
+
+    .achievements {
+      margin-top: 12px;
+    }
+
+    .achievements h3 {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .achievements ul {
+      list-style: disc;
+      padding-left: 20px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .club-images {
+      margin-top: 12px;
+    }
+
+    .club-images img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>PICT Student Clubs</header>
+
+  <main id="clubs-container"></main>
+
+  <script>
+    const clubs = [
+      {
+        name: "Coding Club",
+        description: "The Coding Club fosters a culture of competitive programming and software development.",
+        achievements: [
+          "Winners of Code Fiesta 2024",
+          "Hosted 50+ coding contests",
+          "Top performers in ACM ICPC regionals"
+        ],
+        images: ["content.jpg", "content2.jpg"]
+      },
+      {
+        name: "Robotics Club",
+        description: "Build, automate, and compete in robotics competitions across the country.",
+        achievements: [
+          "Winners at Techfest, IIT Bombay",
+          "Created an autonomous line follower bot",
+          "Finalists in Robowars 2023"
+        ],
+        images: ["robotics1.jpg", "robotics2.jpg"]
+      },
+      {
+        name: "Dance Club",
+        description: "Expressive, energetic, and synchronized – where rhythm meets talent.",
+        achievements: [
+          "Winners of PICT Cultural Fest",
+          "Performed at national college events",
+          "Choreographed flash mobs across campus"
+        ],
+        images: ["dance1.jpg", "dance2.jpg"]
+      }
+    ];
+
+    $(document).ready(function () {
+      clubs.forEach(club => {
+        const achievementsList = club.achievements.map(item => `<li>${item}</li>`).join("");
+        const imagesHtml = club.images.map(img => `<img src="${img}" alt="${club.name}" />`).join("");
+
+        const clubCard = `
+          <section class="club-card">
+            <h2>${club.name}</h2>
+            <p>${club.description}</p>
+            <div class="achievements">
+              <h3>Achievements:</h3>
+              <ul>${achievementsList}</ul>
+            </div>
+            <div class="club-images">${imagesHtml}</div>
+          </section>
+        `;
+
+        $('#clubs-container').append(clubCard);
+      });
+    });
+  </script>
+
+</body>
+</html>

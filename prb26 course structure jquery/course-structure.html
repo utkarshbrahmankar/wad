@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PICT B.E. Course Structure</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- jQuery Mobile Stylesheet -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <style>
+    body {
+      background-color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .course-title {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .course-content {
+      margin: 20px 0;
+    }
+
+    .subject-list {
+      padding-left: 20px;
+      list-style-type: none;
+    }
+
+    .subject-list li {
+      margin-bottom: 10px;
+    }
+    .subject-list li h4 {
+      font-size: 18px;
+      color: #007bff;
+    }
+
+    .subject-list li p {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .ui-collapsible-content {
+      background-color: #f9f9f9;
+    }
+
+    .ui-collapsible-heading {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .ui-collapsible-heading a {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Home Page -->
+<div data-role="page" id="home" data-theme="a">
+  <div data-role="header">
+    <h1>PICT B.E. Course Structure</h1>
+  </div>
+
+  <div data-role="content">
+    <div class="course-title">
+      <h3>PICT - Bachelor of Engineering (B.E.) Course Structure</h3>
+    </div>
+
+    <!-- FE (First Year) -->
+    <div data-role="collapsible" data-collapsed="true">
+      <h3>First Year (FE)</h3>
+      <div class="course-content">
+        <ul class="subject-list">
+          <li>
+            <h4>Mathematics I</h4>
+            <p>Introduction to calculus, differential equations, and their applications in engineering.</p>
+          </li>
+          <li>
+            <h4>Physics I</h4>
+            <p>Fundamentals of mechanics, optics, and thermodynamics.</p>
+          </li>
+          <li>
+            <h4>C Programming</h4>
+            <p>Basics of programming in C, data types, loops, functions, and arrays.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SE (Second Year) -->
+    <div data-role="collapsible" data-collapsed="true">
+      <h3>Second Year (SE)</h3>
+      <div class="course-content">
+        <ul class="subject-list">
+          <li>
+            <h4>Mathematics II</h4>
+            <p>Advanced calculus, Fourier series, and partial differential equations.</p>
+          </li>
+          <li>
+            <h4>Digital Electronics</h4>
+            <p>Study of logic gates, combinational circuits, and flip-flops.</p>
+          </li>
+          <li>
+            <h4>Data Structures</h4>
+            <p>Introduction to linear data structures like arrays, stacks, and queues.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TE (Third Year) -->
+    <div data-role="collapsible" data-collapsed="true">
+      <h3>Third Year (TE)</h3>
+      <div class="course-content">
+        <ul class="subject-list">
+          <li>
+            <h4>Mathematics III</h4>
+            <p>Laplace transforms, complex analysis, and statistical methods in engineering.</p>
+          </li>
+          <li>
+            <h4>Computer Networks</h4>
+            <p>Study of network protocols, OSI model, and practical networking concepts.</p>
+          </li>
+          <li>
+            <h4>Operating Systems</h4>
+            <p>Understanding of process management, memory management, and file systems in modern OS.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- BE (Final Year) -->
+    <div data-role="collapsible" data-collapsed="true">
+      <h3>Final Year (BE)</h3>
+      <div class="course-content">
+        <ul class="subject-list">
+          <li>
+            <h4>Software Engineering</h4>
+            <p>Principles of software development, design, testing, and maintenance.</p>
+          </li>
+          <li>
+            <h4>Project Management</h4>
+            <p>Planning, scheduling, and managing resources for successful project execution.</p>
+          </li>
+          <li>
+            <h4>Machine Learning</h4>
+            <p>Introduction to machine learning algorithms and applications in real-world problems.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    <h4>PICT - B.E. Course Structure</h4>
+  </div>
+</div>
+
+</body>
+</html>

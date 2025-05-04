@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "name": "John Doe",
+      "designation": "Software Engineer",
+      "department": "IT",
+      "salary": 60000,
+      "image": "profile.png"
+    },
+    {
+      "id": 2,
+      "name": "Priya Sharma",
+      "designation": "HR Manager",
+      "department": "Human Resources",
+      "salary": 55000,
+      "image": "profile.png"
+    },
+    {
+      "id": 3,
+      "name": "Amit Patel",
+      "designation": "Accountant",
+      "department": "Finance",
+      "salary": 48000,
+      "image": "profile.png"
+    }
+  ]
+  

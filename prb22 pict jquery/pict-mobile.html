@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PICT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>
+  <style>
+    .ui-page {
+      background-color: #f8f8f8;
+    }
+    .logo {
+      text-align: center;
+      padding: 10px;
+    }
+    .logo img {
+      max-width: 200px;
+    }
+    .ui-header {
+      background-color: #4096eb !important;
+    }
+    .ui-footer {
+      background-color: #4096eb !important;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    h2 {
+      color: #003366;
+    }
+    .ui-collapsible-heading {
+      background-color: #e9e9e9;
+    }
+    .contact-info {
+      margin: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Home Page -->
+<div data-role="page" id="home">
+  <div data-role="header">
+    <h1>PICT</h1>
+  </div>
+
+  <div role="main" class="ui-content">
+    <div class="logo">
+      <img src="/api/placeholder/200/100" alt="PICT Logo">
+    </div>
+    
+    <h2>Welcome to Pune Institute of Computer Technology</h2>
+    <p>Excellence in Technical Education Since 1983</p>
+    
+    <ul data-role="listview" data-inset="true">
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#courses">Courses Offered</a></li>
+      <li><a href="#departments">Departments</a></li>
+      <li><a href="#contact">Contact Information</a></li>
+    </ul>
+  </div>
+
+  <div data-role="footer">
+    <h4>&copy; 2025 PICT, Pune</h4>
+  </div>
+</div>
+
+<!-- About Us Page -->
+<div data-role="page" id="about">
+  <div data-role="header">
+    <a href="#home" data-icon="home" data-transition="slide">Home</a>
+    <h1>About Us</h1>
+  </div>
+
+  <div role="main" class="ui-content">
+    <h2>About PICT</h2>
+    
+    <div>
+      <div data-role="collapsible">
+        <h3>Our History</h3>
+        <p>Established in 1983, Pune Institute of Computer Technology (PICT) is one of the premier engineering colleges in Pune, affiliated to Savitribai Phule Pune University.</p>
+      </div>
+      
+      <div data-role="collapsible">
+        <h3>Vision</h3>
+        <p>To be a center of excellence in technical education and research, producing globally competent and socially responsible professionals.</p>
+      </div>
+      
+      <div data-role="collapsible">
+        <h3>Mission</h3>
+        <p>To provide quality technical education in line with global trends and the needs of industry.</p>
+      </div>
+    
+    </div>
+  </div>
+
+  <div data-role="footer">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="home">Home</a></li>
+        <li><a href="#about" data-icon="info" class="ui-btn-active">About</a></li>
+        <li><a href="#courses" data-icon="grid">Courses</a></li>
+        <li><a href="#departments" data-icon="bars">Departments</a></li>
+        <li><a href="#contact" data-icon="mail">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Courses Page -->
+<div data-role="page" id="courses">
+  <div data-role="header">
+    <a href="#home" data-icon="home" data-transition="slide" data-direction="reverse">Home</a>
+    <h1>Courses Offered</h1>
+  </div>
+
+  <div role="main" class="ui-content">
+    <h2>Our Programs</h2>
+    
+    <div>
+      <div data-role="collapsible" data-collapsed="false">
+        <h3>Undergraduate Programs</h3>
+        <ul data-role="listview">
+          <li>B.E. in Computer Engineering</li>
+          <li>B.E. in Information Technology</li>
+          <li>B.E. in Electronics & Telecommunication</li>
+          <li>B.Tech in Artificial Intelligence & Data Science</li>
+        </ul>
+      </div>
+      
+      <div data-role="collapsible">
+        <h3>Postgraduate Programs</h3>
+        <ul data-role="listview">
+          <li>M.Tech in Computer Engineering</li>
+          <li>M.Tech in Electronics & Telecommunication</li>
+          <li>Ph.D. in Computer Engineering</li>
+          <li>Ph.D. in Electronics & Telecommunication</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div data-role="footer">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="home">Home</a></li>
+        <li><a href="#about" data-icon="info">About</a></li>
+        <li><a href="#courses" data-icon="grid" class="ui-btn-active">Courses</a></li>
+        <li><a href="#departments" data-icon="bars">Departments</a></li>
+        <li><a href="#contact" data-icon="mail">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Departments Page -->
+<div data-role="page" id="departments">
+  <div data-role="header">
+    <a href="#home" data-icon="home" data-transition="slide" data-direction="reverse">Home</a>
+    <h1>Departments</h1>
+  </div>
+
+  <div role="main" class="ui-content">
+    <h2>Academic Departments</h2>
+    
+    <div>
+      <div data-role="collapsible" data-collapsed="false">
+        <h3>Computer Engineering</h3>
+        <p>The Department of Computer Engineering was established in 1983. It offers undergraduate, postgraduate, and doctoral programs.</p>
+        <p><strong>Head of Department:</strong> Mrs. Geetanjali Kale</p>
+      </div>
+      
+      <div data-role="collapsible">
+        <h3>Information Technology</h3>
+        <p>The Department of Information Technology focuses on developing professionals in the fields of software development, networking, and database management.</p>
+        <p><strong>Head of Department:</strong> Mrs. Archana Ghotkar</p>
+      </div>
+      
+      <div data-role="collapsible">
+        <h3>Electronics & Telecommunication</h3>
+        <p>The Department of Electronics & Telecommunication Engineering offers comprehensive education in electronic systems, communication technologies, and signal processing.</p>
+        <!-- <p><strong>Head of Department:</strong> Dr. Supriya Kelkar</p> -->
+      </div>
+      
+      <div data-role="collapsible">
+        <h3>Artificial Intelligence & Data Science</h3>
+        <p>The newest department at PICT, focuses on cutting-edge technologies in AI, machine learning, and data analytics.</p>
+        <!-- <p><strong>Head of Department:</strong> Dr. Abhijit Patil</p> -->
+      </div>
+    </div>
+  </div>
+
+  <div data-role="footer">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="home">Home</a></li>
+        <li><a href="#about" data-icon="info">About</a></li>
+        <li><a href="#courses" data-icon="grid">Courses</a></li>
+        <li><a href="#departments" data-icon="bars" class="ui-btn-active">Departments</a></li>
+        <li><a href="#contact" data-icon="mail">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Page -->
+<div data-role="page" id="contact">
+  <div data-role="header">
+    <a href="#home" data-icon="home" data-transition="slide" data-direction="reverse">Home</a>
+    <h1>Contact Us</h1>
+  </div>
+
+  <div role="main" class="ui-content">
+    <h2>Get in Touch</h2>
+    
+    <div class="contact-info">
+        <h2>Address</h2>
+        <p>
+          Pune Institute of Computer Technology<br>
+          Survey No. 27, Near Trimurti Chowk<br>
+          Dhankawadi, Pune - 411043<br>
+          Maharashtra, India
+        </p>
+      
+        <h2>Contact Numbers</h2>
+        <p><strong>Main Office:</strong> +91-20-2437 3456</p>
+        <p><strong>Admission Cell:</strong> +91-20-2437 7890</p>
+        <p><strong>Fax:</strong> +91-20-2437 3789</p>
+      
+        <h2>Email Addresses</h2>
+        <p><strong>General Inquiries:</strong> info@pict.edu</p>
+        <p><strong>Admissions:</strong> admissions@pict.edu</p>
+
+      
+    </div>
+    
+    
+  </div>
+
+  <div data-role="footer">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="home">Home</a></li>
+        <li><a href="#about" data-icon="info">About</a></li>
+        <li><a href="#courses" data-icon="grid">Courses</a></li>
+        <li><a href="#departments" data-icon="bars">Departments</a></li>
+        <li><a href="#contact" data-icon="mail" class="ui-btn-active">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

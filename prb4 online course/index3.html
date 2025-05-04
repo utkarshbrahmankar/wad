@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Learning Hub - Courses</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f9ff;
+      color: #333;
+    }
+
+    header {
+      background-color: #0077b6;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #0077b6;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      border-radius: 5px;
+    }
+
+    nav a:hover, nav a.active {
+      background-color: #005f73;
+    }
+
+    .content {
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #0077b6;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin: 8px 0;
+    }
+
+    .course-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .course-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .course-card h3 {
+      margin-top: 0;
+      color: #023e8a;
+    }
+
+    .course-card p {
+      margin: 6px 0;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: block;
+      }
+    }
+    .path-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 15px;
+    }
+    
+    .path-card {
+      background-color: #e0f4ff;
+      border-left: 6px solid #0077b6;
+      border-radius: 10px;
+      padding: 15px 20px;
+      transition: transform 0.3s ease;
+    }
+    
+    .path-card:hover {
+      transform: translateY(-4px);
+      background-color: #caf0f8;
+    }
+    
+    .path-card h3 {
+      margin-top: 0;
+      color: #023e8a;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Online Learning Hub - Courses</h1>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showCourses('All', this)" class="active">All</a>
+    <a href="#" onclick="showCourses('AI & ML', this)">AI & ML</a>
+    <a href="#" onclick="showCourses('Data Science', this)">Data Science</a>
+    <a href="#" onclick="showCourses('Web Development', this)">Web Development</a>
+    <a href="#" onclick="showCourses('Cybersecurity', this)">Cybersecurity</a>
+    <a href="#" onclick="showCourses('Cloud Computing', this)">Cloud Computing</a>
+  </nav>
+
+  <div class="content">
+    <section class="intro">
+      <h2>Welcome to Online Learning Hub</h2>
+      <p>Unlock your potential with Online Learning Hub – your gateway to quality, flexible, and affordable education. Learn at your own pace from industry experts and gain practical skills to stay ahead in today’s competitive world. Join thousands of learners today!</p>
+    </section>
+
+    <section class="learning-paths">
+      <h2>Step-by-Step Learning Paths</h2>
+      <div class="path-grid">
+        <div class="path-card">
+          <h3>1. Beginner</h3>
+          <p>Start with fundamental concepts and build a solid foundation. Perfect for new learners and freshers.</p>
+        </div>
+        <div class="path-card">
+          <h3>2. Intermediate</h3>
+          <p>Enhance your skills with real-world examples and hands-on exercises. Ideal for those with some prior knowledge.</p>
+        </div>
+        <div class="path-card">
+          <h3>3. Advanced</h3>
+          <p>Master expert-level tools, techniques, and projects to gain professional expertise in your domain.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="course-categories">
+      <h2>Course Categories</h2>
+      <ul>
+        <li>AI & ML</li>
+        <li>Data Science</li>
+        <li>Web Development</li>
+        <li>Cybersecurity</li>
+        <li>Cloud Computing</li>
+      </ul>
+    </section>
+
+    <section class="courses">
+      <h2>Available Courses</h2>
+      <div class="course-container" id="courseContainer">
+        <!-- Course cards will be dynamically inserted here -->
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const courses = [
+      {
+        name: "Machine Learning Essentials",
+        instructor: "Dr. A. Sharma",
+        duration: "6 Weeks",
+        fee: "₹5,000",
+        category: "AI & ML"
+      },
+      {
+        name: "Introduction to Data Science",
+        instructor: "Ritika Mehta",
+        duration: "8 Weeks",
+        fee: "₹6,500",
+        category: "Data Science"
+      },
+      {
+        name: "Full-Stack Web Development",
+        instructor: "Arjun Kapoor",
+        duration: "10 Weeks",
+        fee: "₹7,000",
+        category: "Web Development"
+      },
+      {
+        name: "AI for Everyone",
+        instructor: "Dr. Leena Patil",
+        duration: "4 Weeks",
+        fee: "₹3,500",
+        category: "AI & ML"
+      },
+      {
+        name: "Cloud Infrastructure Fundamentals",
+        instructor: "Neeraj Rao",
+        duration: "6 Weeks",
+        fee: "₹4,800",
+        category: "Cloud Computing"
+      },
+      {
+        name: "Cybersecurity Fundamentals",
+        instructor: "Dr. Ananya Rao",
+        duration: "5 Weeks",
+        fee: "₹4,200",
+        category: "Cybersecurity"
+      }
+    ];
+
+    const courseContainer = document.getElementById("courseContainer");
+
+    function showCourses(category, element) {
+      courseContainer.innerHTML = "";
+
+      const filtered = category === "All" ? courses : courses.filter(c => c.category === category);
+
+      filtered.forEach(course => {
+        const card = document.createElement("div");
+        card.className = "course-card";
+        card.innerHTML = `
+          <h3>${course.name}</h3>
+          <p><strong>Instructor:</strong> ${course.instructor}</p>
+          <p><strong>Duration:</strong> ${course.duration}</p>
+          <p><strong>Fee:</strong> ${course.fee}</p>
+          <p><strong>Category:</strong> ${course.category}</p>
+        `;
+        courseContainer.appendChild(card);
+      });
+
+      document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
+      element.classList.add("active");
+    }
+
+    window.onload = () => showCourses("All", document.querySelector('nav a'));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie Reviews</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- jQuery Mobile -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <style>
+    .movie-block {
+      padding: 10px;
+      margin: 10px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+    }
+
+    .movie-block img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .movie-block h3 {
+      margin: 10px 0 5px 0;
+    }
+
+    .movie-block p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Home Page -->
+<div data-role="page" id="home">
+  <div data-role="header">
+    <h1>Movie Reviews</h1>
+  </div>
+
+  <div data-role="content">
+    <div class="movie-block">
+      <img src="https://m.media-amazon.com/images/I/81r+LN-ZsTL._AC_SL1500_.jpg" alt="Inception Poster">
+      <h3>Inception</h3>
+      <p><strong>Genre:</strong> Sci-Fi, Thriller</p>
+      <p><strong>Summary:</strong> A thief who enters people's dreams to steal secrets is offered a chance to erase his past crimes by planting an idea instead.</p>
+      <p><strong>Review:</strong> Mind-bending and visually stunning, Inception keeps you thinking even after the credits roll.</p>
+    </div>
+
+    <div class="movie-block">
+      <img src="https://m.media-amazon.com/images/I/91T2A0R6+qL._AC_SL1500_.jpg" alt="The Dark Knight Poster">
+      <h3>The Dark Knight</h3>
+      <p><strong>Genre:</strong> Action, Crime, Drama</p>
+      <p><strong>Summary:</strong> Batman faces his greatest psychological and physical test when the Joker brings chaos to Gotham City.</p>
+      <p><strong>Review:</strong> With gripping performances and intense storytelling, it's one of the best superhero films ever made.</p>
+    </div>
+
+    <div class="movie-block">
+      <img src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SL1178_.jpg" alt="Interstellar Poster">
+      <h3>Interstellar</h3>
+      <p><strong>Genre:</strong> Sci-Fi, Adventure, Drama</p>
+      <p><strong>Summary:</strong> A team travels through a wormhole to find a new home for humanity as Earth faces extinction.</p>
+      <p><strong>Review:</strong> A breathtaking exploration of time, love, and survival — visually and emotionally powerful.</p>
+    </div>
+
+    <div class="movie-block">
+      <img src="https://m.media-amazon.com/images/I/91P3uLZsR1L._AC_SL1500_.jpg" alt="The Social Network Poster">
+      <h3>The Social Network</h3>
+      <p><strong>Genre:</strong> Biography, Drama</p>
+      <p><strong>Summary:</strong> The story of the founding of Facebook and the legal battles that followed.</p>
+      <p><strong>Review:</strong> Sharp writing and direction make this a compelling look at ambition and innovation.</p>
+    </div>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    <h4>Static Movie Reviews</h4>
+  </div>
+</div>
+
+</body>
+</html>

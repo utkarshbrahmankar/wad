@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mugs Listing</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .card-img-top {
+      height: 200px;
+      object-fit: contain;
+      background-color: #f8f9fa;
+    }
+    .filter-section {
+      position: sticky;
+      top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="mb-0">Mugs</h2>
+      <!-- Sort Dropdown (purely visual for now) -->
+      <select class="form-select w-auto">
+        <option value="none">Sort by</option>
+        <option>Price: Low to High</option>
+        <option>Price: High to Low</option>
+      </select>
+    </div>
+    <div class="row">
+
+      <!-- Sidebar Filters -->
+      <div class="col-md-3">
+        <div class="filter-section">
+          <h5>Target Market</h5>
+          <select class="form-select mb-3">
+            <option value="all">All</option>
+            <option value="usa">USA</option>
+            <option value="canada">Canada</option>
+            <option value="uk">UK</option>
+          </select>
+
+          <h5>Print Area</h5>
+          <select class="form-select mb-3">
+            <option value="all">All</option>
+            <option value="front">Front</option>
+            <option value="wrap">Wrap</option>
+          </select>
+
+          <h5>Print Providers</h5>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="district" id="provider1">
+            <label class="form-check-label" for="provider1">District Photo</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="mylocker" id="provider2">
+            <label class="form-check-label" for="provider2">MyLocker</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="artsadd" id="provider3">
+            <label class="form-check-label" for="provider3">ArtsAdd</label>
+          </div>          
+        </div>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="col-md-9">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="https://via.placeholder.com/300x200?text=Mug+1" class="card-img-top" alt="Mug 1">
+              <div class="card-body">
+                <h6 class="card-title">Ceramic Mug 11oz</h6>
+                <p class="card-text">From USD 4.40</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="https://via.placeholder.com/300x200?text=Mug+2" class="card-img-top" alt="Mug 2">
+              <div class="card-body">
+                <h6 class="card-title">Accent Coffee Mug 11oz</h6>
+                <p class="card-text">From USD 5.52</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="https://via.placeholder.com/300x200?text=Mug+3" class="card-img-top" alt="Mug 3">
+              <div class="card-body">
+                <h6 class="card-title">Ceramic Mug 15oz</h6>
+                <p class="card-text">From USD 5.66</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

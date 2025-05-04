@@ -1,0 +1,52 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fffaf0;
+  color: #333;
+}
+
+header {
+  background: #ff6347;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background: url('../images/restaurant.jpg') center/cover;
+  padding: 4rem;
+  text-align: center;
+  color: white;
+}
+
+section {
+  padding: 2rem;
+}
+
+.menu ul, .highlights ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu ul li, .highlights ul li {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background: #fff0e0;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  background: #ff6347;
+  color: white;
+  padding: 1rem;
+  position: relative;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Employee</title>
+</head>
+<body>
+  <h1>Add New Employee</h1>
+  <form id="addForm">
+    <input name="id" placeholder="ID" required><br>
+    <input name="name" placeholder="Name" required><br>
+    <input name="department" placeholder="Department"><br>
+    <input name="designation" placeholder="Designation"><br>
+    <input name="salary" placeholder="Salary" type="number"><br>
+    <input name="joiningDate" type="date"><br>
+    <button type="submit">Add</button>
+  </form>
+  <script>
+    document.getElementById('addForm').onsubmit = async (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const data = Object.fromEntries(formData.entries());
+      data.id = parseInt(data.id);
+      data.salary = parseFloat(data.salary);
+      const res = await fetch('/api/employees', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      alert('Employee added!');
+      window.location.href = 'index.html';
+    };
+  </script>
+</body>
+</html>

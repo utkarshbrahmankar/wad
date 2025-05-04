@@ -1,0 +1,23 @@
+{
+    "Delhi": {
+      "temperature": "32°C",
+      "humidity": "50%",
+      "condition": "Sunny"
+    },
+    "Mumbai": {
+      "temperature": "28°C",
+      "humidity": "70%",
+      "condition": "Humid"
+    },
+    "Chennai": {
+      "temperature": "30°C",
+      "humidity": "65%",
+      "condition": "Cloudy"
+    },
+    "Kolkata": {
+      "temperature": "29°C",
+      "humidity": "60%",
+      "condition": "Rainy"
+    }
+  }
+  

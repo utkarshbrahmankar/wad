@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Mobile Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- jQuery Mobile -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 20px;
+      margin: 20px 0;
+    }
+
+    .info-block {
+      padding: 10px;
+      background-color: #f9f9f9;
+      margin: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .info-block h4 {
+      margin: 5px 0;
+      color: #333;
+    }
+
+    .info-block p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Home Page -->
+<div data-role="page" id="home">
+  <div data-role="header">
+    <h1>My Portfolio</h1>
+  </div>
+
+  <div data-role="content">
+    <div class="section-title">Welcome</div>
+    <a href="#about" class="ui-btn">About Me</a>
+    <a href="#projects" class="ui-btn">Projects</a>
+    <a href="#skills" class="ui-btn">Skills</a>
+    <a href="#contact" class="ui-btn">Contact</a>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    <h4>Created by [Your Name]</h4>
+  </div>
+</div>
+
+<!-- About Page -->
+<div data-role="page" id="about">
+  <div data-role="header">
+    <h1>About Me</h1>
+    <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+  </div>
+
+  <div data-role="content">
+    <div class="info-block">
+      <p>I am a web developer with a focus on responsive and mobile-friendly websites.</p>
+      <p>I enjoy building projects using HTML, CSS, JavaScript, and frameworks like Angular and Node.js.</p>
+    </div>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    <h4>About Me</h4>
+  </div>
+</div>
+
+<!-- Projects Page -->
+<div data-role="page" id="projects">
+  <div data-role="header">
+    <h1>Projects</h1>
+    <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+  </div>
+
+  <div data-role="content">
+    <div class="info-block">
+      <h4>Online Learning Hub</h4>
+      <p>Course listing with filters and responsive design.</p>
+      <h4>To-Do App</h4>
+      <p>Simple offline task manager using localStorage.</p>
+      <h4>Music Database</h4>
+      <p>CRUD app using Node.js and MongoDB.</p>
+    </div>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    <h4>Projects</h4>
+  </div>
+</div>
+
+<!-- Skills Page -->
+<div data-role="page" id="skills">
+  <div data-role="header">
+    <h1>Skills</h1>
+    <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+  </div>
+
+  <div data-role="content">
+    <div class="info-block">
+      <h4>Frontend</h4>
+      <p>HTML, CSS, JavaScript, Bootstrap</p>
+      <h4>Backend</h4>
+      <p>Node.js, Express, MongoDB</p>
+      <h4>Tools</h4>
+      <p>Git, VS Code</p>
+    </div>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    <h4>Skills</h4>
+  </div>
+</div>
+
+<!-- Contact Page -->
+<div data-role="page" id="contact">
+  <div data-role="header">
+    <h1>Contact</h1>
+    <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+  </div>
+
+  <div data-role="content">
+    <div class="info-block">
+      <h4>Email</h4>
+      <p>yourname@example.com</p>
+      <h4>Phone</h4>
+      <p>+91-9876543210</p>
+      <h4>LinkedIn</h4>
+      <p>linkedin.com/in/yourprofile</p>
+    </div>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    <h4>Contact</h4>
+  </div>
+</div>
+
+</body>
+</html>
