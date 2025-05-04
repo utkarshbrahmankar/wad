@@ -1,0 +1,23 @@
+.container {
+    width: 300px;
+    margin: 40px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  input {
+    width: 70%;
+    padding: 6px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    margin-left: 5px;
+    padding: 6px 10px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
